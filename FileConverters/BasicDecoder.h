@@ -5,7 +5,7 @@
 #include <string>
 #include <list>
 
-#include "..\types.h"
+#include "../types.h"
 
 #define BAS_LINE_MAX_LEN 0xFFFF
 #define BAS_FMT_CHR_CNT	11
