@@ -1067,6 +1067,7 @@ CDiskBase* OpenDisk(char* path, StorageType& srcType, vector<byte>& foundGeom)
 	theFS = NULL;
 
 	string fileExt = GetExtension(path);
+	std::transform(fileExt.begin(), fileExt.end(), fileExt.begin(), ::toupper);
 
 	if (stricmp(path, "A:") == 0)
 	{
@@ -1351,7 +1352,6 @@ bool Open(int argc, char* argv[])
 	*/
 	Close(0, NULL);
 
-	strupr(path);	
 	theDisk = OpenDisk(path, storType, foundGeom);	
 	
 	if (storType == STOR_NONE)
