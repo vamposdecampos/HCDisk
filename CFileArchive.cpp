@@ -1,5 +1,6 @@
 #include "CFileArchive.h"
 #include <algorithm> 
+#include <stdio.h>
 #include "stringutils.h"
 
 
