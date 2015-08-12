@@ -72,6 +72,9 @@ static inline char getch(void)
 #define stricmp strcasecmp
 #define _tempnam tempnam
 #define MAX_PATH PATH_MAX
+#define IMAGE_VIEWER "run-mailcap "
+#else
+#define IMAGE_VIEWER ""
 #endif
 
 using namespace std;
@@ -939,7 +942,7 @@ bool TypeFile(int argc, char* argv[])
 				sprintf(gifName, "%s.%s", fntmp, "gif");				
 				free(fntmp);
 				ConvertSCR2GIF(buf1, gifName);			
-				sprintf(gifNameQuoted, "\"%s\"", gifName);
+				sprintf(gifNameQuoted, "%s\"%s\"", IMAGE_VIEWER, gifName);
 				system(gifNameQuoted);				
 				remove(gifName);
 			}
