@@ -195,7 +195,7 @@ namespace Basic
 	typedef struct
 	{
 		byte id;
-		char* str;
+		const char* str;
 		byte len; //length if the argument, excluding keyword
 		BASICItemClass type;
 	} BASICKeywordsType;
