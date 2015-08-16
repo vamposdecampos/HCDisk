@@ -16,7 +16,7 @@ public:
 	CFSTRDSCL(char* imgFile, char* name);
 	~CFSTRDSCL();
 	bool Init();	
-	virtual CFile* FindFirst(char* pattern = "*");		
+	virtual CFile* FindFirst(const char* pattern = "*");		
 	virtual CFile* FindNext();	
 	virtual bool ReadFile(CFile*);	
 	virtual bool OpenFile(CFile* file);
@@ -26,7 +26,7 @@ protected:
 	char* imgFileName;
 	std::vector<CFileTRD> TRD_Files;
 	byte dirEntIdx;
-	char* FindPattern;
+	const char* FindPattern;
 	const static byte MAX_DIR_ENTRIES = 128;
 	const static word SECT_SIZE = 256;
 	CFSTRDOS::DirEntryType TRD_Directory[MAX_DIR_ENTRIES];	

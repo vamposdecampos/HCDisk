@@ -33,7 +33,7 @@ public:
 
 	virtual bool Init();
 	virtual bool Open(char* name, bool create = false);
-	virtual CFile* FindFirst(char* pattern);
+	virtual CFile* FindFirst(const char* pattern);
 	virtual CFile* FindNext();		
 	virtual bool AddFile(CFileSpectrumTape* fSpec);
 	virtual bool Close();

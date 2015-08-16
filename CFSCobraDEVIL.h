@@ -42,7 +42,7 @@ public:
 
 	virtual dword GetFileSize(CFile* file, bool onDisk = false);
 	CFile* NewFile(char* name, long len = 0, byte* data = NULL);
-	CFile* FindFirst(char* pattern);
+	CFile* FindFirst(const char* pattern);
 	CFile* FindNext();
 	virtual bool OpenFile(CFile*) { return true; };
 	virtual bool CloseFile(CFile*) { return true; };

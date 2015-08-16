@@ -127,7 +127,7 @@ CFileMGT* CFSMGT::CreateFileMGT(MGTDirEntry dir)
 	return f;
 }
 
-CFile* CFSMGT::FindFirst(char* pattern)
+CFile* CFSMGT::FindFirst(const char* pattern)
 {
 	FindIdx = 0;
 	FindPattern = pattern;

@@ -139,7 +139,7 @@ CFile* CFSCobraDEVIL::NewFile(char* name, long len, byte* data)
 	return f;
 }
 
-CFile* CFSCobraDEVIL::FindFirst(char* pattern)
+CFile* CFSCobraDEVIL::FindFirst(const char* pattern)
 {
 	findIdx = 0;
 	strcpy(DEVIL_FindPattern, pattern);

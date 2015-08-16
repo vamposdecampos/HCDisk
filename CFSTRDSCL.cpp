@@ -65,7 +65,7 @@ bool CFSTRDSCL::Init()
 	return res;
 }
 
-CFile* CFSTRDSCL::FindFirst(char* pattern)
+CFile* CFSTRDSCL::FindFirst(const char* pattern)
 {	
 	dirEntIdx = 0;
 	FindPattern = pattern;

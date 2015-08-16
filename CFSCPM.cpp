@@ -274,7 +274,7 @@ bool CFSCPM::ReadDirectory()
 }
 
 
-CFile* CFSCPM::FindFirst(char* pattern)
+CFile* CFSCPM::FindFirst(const char* pattern)
 {
 	//ReadDirectory();	
 	CPM_FindIdx = 0;
@@ -291,7 +291,7 @@ CFile* CFSCPM::FindFirst(char* pattern)
 	CWD = 0;
 	includeDeletedFiles = false;
 
-	char* fld = strrchr(pattern, '\\');
+	const char* fld = strrchr(pattern, '\\');
 	if (fld != NULL)
 	{
 		CWD = atoi(string(pattern).substr(0, fld - pattern).c_str());
@@ -303,13 +303,13 @@ CFile* CFSCPM::FindFirst(char* pattern)
 	return FindNext();
 }
 
-CFile* CFSCPM::FindFirst(char* pattern, bool includeDeleted)
+CFile* CFSCPM::FindFirst(const char* pattern, bool includeDeleted)
 {
 	CPM_FindIdx = 0;
 	CWD = 0;
 	includeDeletedFiles = includeDeleted;
 
-	char* fld = strrchr(pattern, '\\');
+	const char* fld = strrchr(pattern, '\\');
 	if (fld != NULL)
 	{
 		CWD = atoi(string(pattern).substr(0, fld - pattern).c_str());

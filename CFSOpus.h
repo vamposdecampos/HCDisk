@@ -22,7 +22,7 @@ public:
 	virtual ~CFSOpus() {};
 
 	virtual bool Init();						
-	virtual CFile* FindFirst(char* pattern);
+	virtual CFile* FindFirst(const char* pattern);
 	virtual CFile* FindNext();	
 	virtual bool ReadBlock(byte* buf, word blkIdx, byte sectCnt = 0);	
 	virtual bool OpenFile(CFile* file);
@@ -66,7 +66,7 @@ protected:
 	vector<DirEntryOpus> OpusDir;
 	vector<CFileOpus> OpusFiles;
 	byte findIdx;
-	char* findPattern;
+	const char *findPattern;
 };
 
 class CFileOpus: public CFileSpectrum, public CFile

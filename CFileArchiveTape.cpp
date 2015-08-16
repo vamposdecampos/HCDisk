@@ -65,7 +65,7 @@ bool CFileArchiveTape::Close()
 		return false;
 }
 
-CFile* CFileArchiveTape::FindFirst(char* pattern)
+CFile* CFileArchiveTape::FindFirst(const char* pattern)
 {
 	//theTap->Seek(0);
 	strcpy(FindPattern, pattern);

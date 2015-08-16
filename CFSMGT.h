@@ -33,7 +33,7 @@ public:
 	};
 
 	virtual bool Init();						
-	virtual CFile* FindFirst(char* pattern);
+	virtual CFile* FindFirst(const char* pattern);
 	virtual CFile* FindNext();	
 	virtual bool ReadBlock(byte* buf, word blkIdx, byte sectCnt = 0);	
 	virtual bool OpenFile(CFile* file);
@@ -108,7 +108,7 @@ protected:
 	};
 
 	byte FindIdx;
-	char* FindPattern;
+	const char* FindPattern;
 
 	virtual CFileMGT* CreateFileMGT(MGTDirEntry dir);	
 };

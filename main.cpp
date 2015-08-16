@@ -600,7 +600,7 @@ bool Cat(int argc, char* argv[])
 	printf("------------------------------------------------------------------------------\n");	
 	
 	list<CFile*> lstAllFiles;
-	CFile* f = theFS->FindFirst((char*)wildCard.c_str(), includeDeleted);
+	CFile* f = theFS->FindFirst(wildCard.c_str(), includeDeleted);
 	while (f != NULL)
 	{
 		lstAllFiles.push_back(f);
@@ -701,7 +701,7 @@ bool GetFile(int argc, char* argv[])
 		return false;	
 
 	bool asText = (argc >= 2 && strcmp((char*)argv[1], "-t") == 0);
-	CFile* f = theFS->FindFirst((char*)argv[0]);	
+	CFile* f = theFS->FindFirst(argv[0]);	
 	CFileSystem::FileNameType fn;
 	bool res = false;
 		

@@ -83,8 +83,8 @@ public:
 			f->SetData(data, len);
 		return f; 
 	};
-	virtual CFile* FindFirst(char* pattern = "*");
-	virtual CFile* FindFirst(char* pattern, bool includeDeleted);
+	virtual CFile* FindFirst(const char* pattern = "*");
+	virtual CFile* FindFirst(const char* pattern, bool includeDeleted);
 	virtual CFile* FindNext();		
 	virtual bool WriteFile(CFileCPM* file);
 	virtual bool WriteFile(CFile* file) { return this->WriteFile((CFileCPM*)file);};

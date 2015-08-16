@@ -81,7 +81,7 @@ public:
 	virtual ~CFSTRDOS();	
 
 	virtual CFile* NewFile(char* name, long len = 0, byte* data = NULL);
-	virtual CFile* FindFirst(char* pattern = "*");		
+	virtual CFile* FindFirst(const char* pattern = "*");		
 	virtual CFile* FindNext();	
 	
 	virtual dword GetDiskMaxSpace();
@@ -113,7 +113,7 @@ protected:
 	//Read the sectIdx'th file sector for file.	
 	CFSTRDOS::DirEntryType TRD_Directory[MAX_DIR_ENTRIES];
 	byte dirEntIdx;
-	char* FindPattern;
+	const char* FindPattern;
 	std::vector<CFileTRD> TRD_Files;
 };
 

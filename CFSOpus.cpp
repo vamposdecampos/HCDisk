@@ -86,7 +86,7 @@ bool CFSOpus::Init()
 	return res;
 }
 
-CFile* CFSOpus::FindFirst(char* pattern)
+CFile* CFSOpus::FindFirst(const char* pattern)
 {
 	//First dir. entry is for label.
 	findIdx = 1;

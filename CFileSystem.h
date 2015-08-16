@@ -29,7 +29,7 @@ public:
 
 	virtual bool Init() = 0;					
 	virtual CFile* NewFile(char* name, long len = 0, byte* data = NULL) { return NULL; };
-	virtual CFile* FindFirst(char* pattern) = 0;
+	virtual CFile* FindFirst(const char* pattern) = 0;
 	virtual CFile* FindNext() = 0;
 	virtual dword GetFileSize(CFile* file, bool onDisk = false);			
 			

@@ -240,7 +240,7 @@ CFile* CFSTRDOS::NewFile(char* name, long len, byte* data)
 	return f;
 }
 
-CFile* CFSTRDOS::FindFirst(char* pattern)
+CFile* CFSTRDOS::FindFirst(const char* pattern)
 {	
 	dirEntIdx = 0;
 	FindPattern = pattern;
