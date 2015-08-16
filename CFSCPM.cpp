@@ -12,7 +12,7 @@
 
 using namespace std;
 
-CFSCPM::CFSCPM(CDiskBase * disk, FSParamsType fsParams, CPMParams cpmParams, char* name) : CFileSystem(disk, name)
+CFSCPM::CFSCPM(CDiskBase * disk, FSParamsType fsParams, CPMParams cpmParams, const char* name) : CFileSystem(disk, name)
 {
 	NAME_LENGHT = 8;
 	EXT_LENGTH = 3;

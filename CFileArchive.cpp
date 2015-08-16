@@ -29,7 +29,7 @@ const char* CFileArchive::FSFeatureNames[] =
 };
 
 
-CFileArchive::CFileArchive(char* name /* = NULL */)
+CFileArchive::CFileArchive(const char* name /* = NULL */)
 {
 	LastError = ERR_NONE;	
 	FSFeatures = FSFT_NONE;

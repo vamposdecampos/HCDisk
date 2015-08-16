@@ -33,7 +33,7 @@ public:
 	};
 #pragma pack ()
 
-	CFSCobraDEVIL(CDiskBase* disk, char* name);
+	CFSCobraDEVIL(CDiskBase* disk, const char* name);
 	virtual ~CFSCobraDEVIL() {} ;
 
 	bool Init();	

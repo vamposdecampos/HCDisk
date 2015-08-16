@@ -12,7 +12,7 @@ const CDiskBase::DiskDescType CFSTRDOS::TRDDiskTypes[] =
 	{ 40, 1, 16, CDiskBase::SECT_SZ_256, 0xE5, 0x58, CDiskBase::DISK_DATARATE_DD_5_25 }
 };
 
-CFSTRDOS::CFSTRDOS(CDiskBase* theDisk, char* name) : CFileSystem(theDisk, name)
+CFSTRDOS::CFSTRDOS(CDiskBase* theDisk, const char* name) : CFileSystem(theDisk, name)
 {
 	NAME_LENGHT = 8;
 	EXT_LENGTH = 1;

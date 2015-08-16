@@ -13,7 +13,7 @@
 class CFSCPMHC: public CFSCPM
 {
 public:
-	CFSCPMHC(CDiskBase* disk, FSParamsType fsParams, CPMParams params, char* name): CFSCPM(disk, fsParams, params,  name)
+	CFSCPMHC(CDiskBase* disk, FSParamsType fsParams, CPMParams params, const char* name): CFSCPM(disk, fsParams, params,  name)
 	{
 		EXT_LENGTH = 0;
 		NAME_LENGHT = 11;

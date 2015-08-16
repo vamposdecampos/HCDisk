@@ -2,7 +2,7 @@
 #include "CFileTRD.h"
 #include "DiskImgRaw.h"
 
-CFSTRDSCL::CFSTRDSCL(char* imgFile, char* name)	
+CFSTRDSCL::CFSTRDSCL(char* imgFile, const char* name)
 {
 	this->imgFileName = imgFile;
 	strcpy(this->Name, name);

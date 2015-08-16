@@ -3,7 +3,7 @@
 #include "DiskBase.h"
 
 
-CFSOpus::CFSOpus(CDiskBase* disk, char* name /* = NULL */): CFileSystem(disk, name)
+CFSOpus::CFSOpus(CDiskBase* disk, const char* name /* = NULL */): CFileSystem(disk, name)
 {
 	NAME_LENGHT = 10;
 	EXT_LENGTH = 0;

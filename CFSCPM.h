@@ -70,7 +70,7 @@ public:
 	} FileOpenMode;		
 
 
-	CFSCPM(CDiskBase * disk, FSParamsType fsParams, CPMParams cpmParams, char* name = NULL);
+	CFSCPM(CDiskBase * disk, FSParamsType fsParams, CPMParams cpmParams, const char* name = NULL);
 	virtual ~CFSCPM();
 
 	virtual bool Init() { return ReadDirectory(); }

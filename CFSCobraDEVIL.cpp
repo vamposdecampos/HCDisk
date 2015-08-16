@@ -6,7 +6,7 @@
 #include <algorithm>
 
 
-CFSCobraDEVIL::CFSCobraDEVIL(CDiskBase* disk, char* name): CFileSystem(disk, name)
+CFSCobraDEVIL::CFSCobraDEVIL(CDiskBase* disk, const char* name): CFileSystem(disk, name)
 {
 	NAME_LENGHT = 10;
 	EXT_LENGTH = 0;

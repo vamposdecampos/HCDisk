@@ -21,7 +21,7 @@ class CFileSystem: public CFileArchive
 public:		
 	
 
-	CFileSystem(CDiskBase* disk, char* name = NULL);		
+	CFileSystem(CDiskBase* disk, const char* name = NULL);
 	virtual ~CFileSystem();	
 
 	char Name[32];

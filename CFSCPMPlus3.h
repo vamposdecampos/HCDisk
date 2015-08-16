@@ -14,7 +14,7 @@ class CFSCPMPlus3: public CFSCPM
 	friend class CFileCPMPlus3;
 
 public:
-	CFSCPMPlus3(CDiskBase* disk, FSParamsType fsParams, CPMParams params, char* name): CFSCPM(disk, fsParams, params,  name)
+	CFSCPMPlus3(CDiskBase* disk, FSParamsType fsParams, CPMParams params, const char* name): CFSCPM(disk, fsParams, params,  name)
 	{		
 		NAME_LENGHT = 8;
 		EXT_LENGTH = 3;

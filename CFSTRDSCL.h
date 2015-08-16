@@ -13,7 +13,7 @@ class CFSTRDSCL: public CFileArchive
 	friend class CFileTRD;
 
 public:
-	CFSTRDSCL(char* imgFile, char* name);
+	CFSTRDSCL(char* imgFile, const char* name);
 	~CFSTRDSCL();
 	bool Init();	
 	virtual CFile* FindFirst(const char* pattern = "*");		

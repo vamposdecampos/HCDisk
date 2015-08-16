@@ -3,7 +3,7 @@
 #include <algorithm>
 
 
-CFileSystem::CFileSystem(CDiskBase* disk, char* name): CFileArchive(name)
+CFileSystem::CFileSystem(CDiskBase* disk, const char* name): CFileArchive(name)
 {	
 	LastError = ERR_NONE;
 	FSFeatures = FSFT_DISK;

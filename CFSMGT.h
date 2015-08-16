@@ -19,7 +19,7 @@ class CFSMGT: public CFileSystem
 	friend class CFileMGT;
 
 public:
-	CFSMGT(CDiskBase* disk, char* name = NULL) : CFileSystem(disk, name) 
+	CFSMGT(CDiskBase* disk, const char* name = NULL) : CFileSystem(disk, name)
 	{
 		FSFeatures = (FileSystemFeature)(FSFeatures | (FSFT_DISK | FSFT_ZXSPECTRUM_FILES | FSFT_CASE_SENSITIVE_FILENAMES));
 	};

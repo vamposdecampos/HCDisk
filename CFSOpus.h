@@ -18,7 +18,7 @@ class CFSOpus: public CFileSystem
 {
 	friend class CFileOpus;
 public:
-	CFSOpus(CDiskBase* disk, char* name = NULL);
+	CFSOpus(CDiskBase* disk, const char* name = NULL);
 	virtual ~CFSOpus() {};
 
 	virtual bool Init();						

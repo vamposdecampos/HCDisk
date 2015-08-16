@@ -210,7 +210,7 @@ typedef enum
 class FS 
 {
 public:
-	char* Name;
+	const char* Name;
 	FSType fsType;	
 	CDiskBase::DiskDescType diskDef;		
 	CFileSystem::FSParamsType fsParams;
@@ -1364,7 +1364,7 @@ bool Open(int argc, char* argv[])
 	}
 	else
 	{				
-		char* dskFmt = StorageTypeNames[(int)storType];
+		const char* dskFmt = StorageTypeNames[(int)storType];
 		
 		printf("Storage format is: %s. ", dskFmt);				
 

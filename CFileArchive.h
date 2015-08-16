@@ -61,7 +61,7 @@ public:
 
 	char Name[260];
 
-	CFileArchive(char* name = NULL);	
+	CFileArchive(const char* name = NULL);
 	virtual ~CFileArchive();		
 
 	virtual bool Init() = 0;					
