@@ -59,7 +59,7 @@ static bool char_eq(char a, char b, bool isCaseSens)
 		return toupper(a) == toupper(b);
 }
 
-bool CFileArchive::WildCmp(char * mask, const FileNameType fileName)
+bool CFileArchive::WildCmp(const char *mask, const FileNameType fileName)
 {
 	if (mask == NULL)
 	{
@@ -69,9 +69,7 @@ bool CFileArchive::WildCmp(char * mask, const FileNameType fileName)
 
 	bool isCaseSens = (GetFSFeatures() & FSFT_CASE_SENSITIVE_FILENAMES) > 0;
 	const char *cp = NULL, *mp = NULL;
-	FileNameType fName = "";	
-	strcpy(fName, fileName);
-	const char* string = fName;
+	const char* string = fileName;
 	const char* wild = mask;
 
 	//return false on first mismatch of non-wildcard caracters

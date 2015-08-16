@@ -113,7 +113,7 @@ protected:
 	byte NAME_LENGHT, EXT_LENGTH;		
 
 	//Compares 2 strings using wildcards.
-	bool WildCmp(char * mask, const FileNameType fileName);			
+	bool WildCmp(const char * mask, const FileNameType fileName);
 };
 
 #endif
