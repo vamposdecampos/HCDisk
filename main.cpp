@@ -103,7 +103,7 @@ typedef enum
 	STOR_LAST
 } StorageType;
 
-static char* StorageTypeNames[] = 
+static const char* StorageTypeNames[] =
 {
 	"NONE",
 	"REAL",
