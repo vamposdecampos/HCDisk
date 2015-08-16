@@ -1,7 +1,7 @@
 #include "CFileArchive.h"
 #include <algorithm> 
 #include <stdio.h>
-#include "stringutils.h"
+#include <ctype.h>
 
 
 const char* CFileArchive::ERROR_TYPE_MSG[] = 
@@ -51,6 +51,14 @@ dword CFileArchive::GetFileSize(CFile* file, bool onDisk)
 	return file->GetLength();
 }
 
+static bool char_eq(char a, char b, bool isCaseSens)
+{
+	if (isCaseSens)
+		return a == b;
+	else
+		return toupper(a) == toupper(b);
+}
+
 bool CFileArchive::WildCmp(char * mask, const FileNameType fileName)
 {
 	if (mask == NULL)
@@ -60,13 +68,9 @@ bool CFileArchive::WildCmp(char * mask, const FileNameType fileName)
 	}
 
 	bool isCaseSens = (GetFSFeatures() & FSFT_CASE_SENSITIVE_FILENAMES) > 0;
-	if (!isCaseSens)
-		strupr(mask);		
 	const char *cp = NULL, *mp = NULL;
 	FileNameType fName = "";	
 	strcpy(fName, fileName);
-	if (!isCaseSens)
-		strupr(fName);	
 	const char* string = fName;
 	const char* wild = mask;
 
@@ -75,7 +79,7 @@ bool CFileArchive::WildCmp(char * mask, const FileNameType fileName)
 	while ((*string) && (*wild != '*')) 
 	{
 		//if chars differ and wild char is not '?', return false
-		if ((*wild != *string) && (*wild != '?'))       
+		if (!char_eq(*wild, *string, isCaseSens) && (*wild != '?'))
 			return 0;
 
 		//get to the next char
@@ -99,7 +103,7 @@ bool CFileArchive::WildCmp(char * mask, const FileNameType fileName)
 			cp = string+1; //cp is the rest of the string after '*'
 		} 
 		//increment while strings match or wildcard string is '?'
-		else if ((*wild == *string) || (*wild == '?')) 
+		else if (char_eq(*wild, *string, isCaseSens) || (*wild == '?'))
 		{
 			wild++;
 			string++;
