@@ -16,7 +16,7 @@
 
 #include "types.h"
 
-#include "crc.h"
+#include "CRC.h"
 
 /*
  * Calculate the value to XOR into the shifted CRC register for the given index
