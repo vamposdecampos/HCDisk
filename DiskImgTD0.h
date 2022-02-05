@@ -123,7 +123,7 @@ private:
 	typedef vector<TDTrack> TDSide;
 	TDSide TDDisk[2];
 
-	int CDiskImgTD0::RLEExpander(unsigned char *src,unsigned char *dst,int blocklen);
+	int RLEExpander(unsigned char *src,unsigned char *dst,int blocklen);
 };
 
 #endif//CDISKTD0_H
