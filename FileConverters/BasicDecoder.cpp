@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <iostream>
 #include <list>
+#include <string.h>
 
 using namespace Basic;
 using namespace std;
