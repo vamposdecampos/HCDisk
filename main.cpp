@@ -70,6 +70,7 @@ static inline char getch(void)
 }
 
 #define stricmp strcasecmp
+#define _tempnam tempnam
 #define MAX_PATH PATH_MAX
 #endif
 
