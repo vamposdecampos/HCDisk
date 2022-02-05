@@ -1,5 +1,6 @@
 #include "CFSCobraDEVIL.h"
 #include "CFileSystem.h"
+#include "stringutils.h"
 
 #include <vector>
 #include <algorithm>

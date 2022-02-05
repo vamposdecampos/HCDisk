@@ -4,6 +4,8 @@
 #ifndef _WIN32
 
 #include <ctype.h>
+#include <assert.h>
+#include <stdio.h>
 
 static inline char *strupr(char *s)
 {
@@ -12,6 +14,13 @@ static inline char *strupr(char *s)
 	for (p = s; *p; p++)
 		*p = toupper(*p);
 	return s;
+}
+
+static inline char *itoa(int n, char *buffer, int radix)
+{
+	assert(radix == 10);
+	sprintf(buffer, "%d", n);
+	return buffer;
 }
 
 #endif
