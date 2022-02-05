@@ -18,6 +18,7 @@ sources = [
 	'DiskBase.cpp',
 	'DiskImgRaw.cpp',
 	'DiskImgCQM.cpp',
+	'DiskImgTD0.cpp',
 	'DiskWin32Stub.cpp',
 	'edsk.cpp',
 	'dsk.cpp',
@@ -29,6 +30,8 @@ sources = [
 	'CFSCobraDEVIL.cpp',
 	'CFSMGT.cpp',
 	'CFSTRD.cpp',
+	'CRC.cpp',
+	'td0_lzss.cpp',
 
 	'Tape/tap.cpp',
 	'Tape/TapeBlock.cpp',
